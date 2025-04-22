@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apple Style Website</title>
+  <style>
+    @keyframes clouds {
+      0% {
+        background-position: 0% 0%, 100% 100%;
+      }
+      50% {
+        background-position: 50% 50%, 50% 50%;
+      }
+      100% {
+        background-position: 0% 0%, 100% 100%;
+      }
+    }
+    .clouds {
+      background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.6), transparent 60%), radial-gradient(circle at 70% 70%, rgba(0, 150, 255, 0.4), transparent 60%);
+      animation: clouds 40s linear infinite;
+      filter: blur(10px);
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+    }
+    .header, .footer, .content {
+      text-align: center;
+    }
+    .header {
+      padding: 2rem;
+      font-size: 2rem;
+      font-weight: bold;
+    }
+    .footer {
+      padding: 1rem;
+      font-size: 1rem;
+    }
+    .button {
+      background-color: black;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 0.5rem;
+      transition: background-color 0.3s;
+    }
+    .button:hover {
+      background-color: gray;
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-900 font-sans min-h-screen">
+  <div class="clouds"></div>
+  <div class="relative z-10">
+    <nav class="flex justify-center space-x-8 py-4 border-b border-gray-300 bg-white bg-opacity-80 backdrop-blur">
+      <a href="#was-ist-das" class="text-gray-600 hover:text-black transition">Was ist das?</a>
+      <a href="#roadmap" class="text-gray-600 hover:text-black transition">Roadmap</a>
+      <a href="#kontakt" class="text-gray-600 hover:text-black transition">Kontakt</a>
+    </nav>
+
+    <header class="header">
+      <h1>Revolutionäres Design</h1>
+      <p>Entdecke das neue Erlebnis – minimalistisch, leistungsstark, intuitiv.</p>
+      <button class="button">Jetzt entdecken</button>
+    </header>
+
+    <section id="was-ist-das" class="content">
+      <h2>Schnelligkeit, Eleganz, Innovation</h2>
+      <p>Erlebe diese drei Merkmale auf einem neuen Level. Durchdacht bis ins Detail.</p>
+    </section>
+
+    <section id="roadmap" class="content">
+      <h2>Unser neues Flaggschiff-Produkt</h2>
+      <img src="https://via.placeholder.com/1000x600.png?text=Produktbild" alt="Produktbild" style="max-width: 100%; border-radius: 10px;">
+      <p>Hochmoderne Technologie trifft auf zeitloses Design. Unser neuestes Gerät definiert, was möglich ist.</p>
+      <button class="button">Mehr erfahren</button>
+      <a href="https://alonstinkt.de" class="button">Buy Now</a>
+    </section>
+
+    <section id="kontakt" class="content">
+      <h2>Hol dir kostenlose Coins</h2>
+      <p>Hinterlasse deine Krypto-Adresse und erhalte kostenlos Coins in deine Wallet.</p>
+      <form action="#" method="POST">
+        <input type="text" placeholder="Deine Wallet-Adresse" required>
+        <button class="button" type="submit">Absenden</button>
+      </form>
+    </section>
+
+    <footer class="footer">
+      <p>© 2025 Deine Marke. Designed mit Stil.</p>
+    </footer>
+  </div>
+</body>
+</html>
